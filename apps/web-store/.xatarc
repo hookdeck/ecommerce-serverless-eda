@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Phil-Leggetter-s-workspace-hc84d7.us-east-1.xata.sh/db/serverless-eda-vercel",
+  "codegen": {
+    "output": "xata.ts"
+  }
+}

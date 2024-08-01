@@ -1,0 +1,24 @@
+.product * {
+  margin-bottom: 10px;
+}
+
+.product .actions {
+  margin-top: 20px;
+}
+
+.product:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+
+.primary {
+  background: var(--foreground);
+  color: var(--background);
+  padding: 8px;
+  border: 1px solid transparent;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+  border-color: var(--gray-alpha-200);
+  border-radius: 4px;
+}
