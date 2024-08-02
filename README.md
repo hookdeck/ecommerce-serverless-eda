@@ -1,4 +1,4 @@
-# E-Commerce Serverless EDA: Inventory Service
+# E-Commerce Serverless EDA
 
 This is an example monorepo demonstrating building a serverless e-commerce event-driven architecture.
 
