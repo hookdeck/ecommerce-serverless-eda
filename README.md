@@ -2,6 +2,8 @@
 
 This is an example monorepo demonstrating building a serverless e-commerce event-driven architecture.
 
+![Web Store home page](https://github.com/user-attachments/assets/d0733cf7-059b-431d-b604-593f311c88d3)
+
 ## Apps and Packages
 
 The example includes the following packages/apps:
