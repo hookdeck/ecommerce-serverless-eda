@@ -9,7 +9,7 @@ This is an example monorepo demonstrating building a serverless e-commerce event
 The example includes the following packages/apps:
 
 - [`web-store`](apps/web-store/): a [Next.js](https://nextjs.org/) e-commerce example application
-- [`inventory`](): a [Next.js](https://nextjs.org/) application exposing services for inventory management API routes
+- [`inventory`](apps/inventory): a [Next.js](https://nextjs.org/) application exposing services for inventory management API routes
 - `@repo/types`: shared type definitions across services in the EDA
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
