@@ -1,0 +1,16 @@
+{
+  "id": "mig_cqm1vp0rbsptar3127bg",
+  "parentID": "mig_cqm1vhorbsptar3127ag",
+  "checksum": "1:af4aea55312727a62e171ed8fa86a0d844b62c0d13ebd8beb55e5126b11c94e5",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "status",
+          "type": "text"
+        },
+        "table": "orders"
+      }
+    }
+  ]
+}

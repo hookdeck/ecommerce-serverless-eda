@@ -3,27 +3,38 @@ import ProductDetail from "../../ui/product-detail";
 import { getProducts } from "../../utils";
 import { Product } from "@repo/types/products";
 import { redirect } from "next/navigation";
+import { getXataClient } from "../../../xata";
 
 export default async function Home({ params }: { params: { sku: string } }) {
   async function createOrder(formData: FormData) {
     "use server";
 
-    // TODO: persist order in web-store database
-    const order = {
-      id: Math.random().toString(36).substring(7), // TODO: use ID from database
-      sku: formData.get("sku"),
-      full_name: formData.get("full_name"),
-      email: formData.get("email"),
+    // TODO: zod validation and error handling
+    const orderRequest = {
+      sku: formData.get("sku") as string,
+      full_name: formData.get("full_name") as string,
+      email: formData.get("email") as string,
     };
 
-    console.log("Creating order:", order);
+    if (!orderRequest.sku || !orderRequest.full_name || !orderRequest.email) {
+      console.error("Order request not valid:", orderRequest);
+      return;
+    }
+
+    // persist order in web-store database
+    const xata = getXataClient();
+
+    console.log("Creating order:", orderRequest);
+    const orderRecord = await xata.db.orders.create({
+      ...orderRequest,
+      status: "pending",
+    });
+    console.log("Created order:", orderRecord);
 
     // Trigger order event via Hookdeck to notify inventory service
     const orderEvent = {
       type: "order:request",
-      data: {
-        ...order,
-      },
+      data: orderRecord,
     };
 
     const orderPost = await fetch(process.env.HOOKDECK_ORDERS_URL!, {
@@ -39,9 +50,12 @@ export default async function Home({ params }: { params: { sku: string } }) {
       return;
     }
 
-    console.log("Order created successfully", await orderPost.json());
+    console.log(
+      "Order created and orderEvent triggered",
+      await orderPost.json(),
+    );
 
-    redirect(`/order/${order.id}`);
+    redirect(`/order/${orderRecord.id}`);
   }
 
   const product = (await getProducts({ sku: params.sku })) as Product;
