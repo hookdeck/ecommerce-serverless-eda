@@ -19,7 +19,7 @@ Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 The application relies on the following hosted services:
 
 - [Hookdeck](https://hookdeck.com/ref=github-serverless-eda-vercel) as an event gateway for inter-service communication
-- [Xata](https://xata.com?ref=github-serverless-eda-vercel) for data persistence
+- [Xata](https://xata.io?ref=github-serverless-eda-vercel) for data persistence
 - [Vercel](https://vercel.com?ref=github-serverless-eda-vercel) for deployment
 
 ## Build
