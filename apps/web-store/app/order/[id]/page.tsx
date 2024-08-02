@@ -1,4 +1,3 @@
-import styles from "./page.module.css";
 import ProductDetail from "../../ui/product-detail";
 import { getProducts } from "../../utils";
 import { Product } from "@repo/types/products";
@@ -9,7 +8,7 @@ import { notFound } from "next/navigation";
 export default async function Home({ params }: { params: { id: string } }) {
   const xata = getXataClient();
 
-  const order = await xata.db.orders.getFirst({
+  const order = await xata.db["webstore-orders"].getFirst({
     filter: { id: params.id },
   });
 

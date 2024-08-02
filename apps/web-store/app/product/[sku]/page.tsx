@@ -25,7 +25,7 @@ export default async function Home({ params }: { params: { sku: string } }) {
     const xata = getXataClient();
 
     console.log("Creating order:", orderRequest);
-    const orderRecord = await xata.db.orders.create({
+    const orderRecord = await xata.db["webstore-orders"].create({
       ...orderRequest,
       status: "pending",
     });

@@ -8,7 +8,7 @@ import type {
 
 const tables = [
   {
-    name: "orders",
+    name: "webstore-orders",
     columns: [
       { name: "sku", type: "string" },
       { name: "full_name", type: "string" },
@@ -16,16 +16,21 @@ const tables = [
       { name: "status", type: "text" },
     ],
   },
+  { name: "inventory-products", columns: [] },
 ] as const;
 
 export type SchemaTables = typeof tables;
 export type InferredTypes = SchemaInference<SchemaTables>;
 
-export type Orders = InferredTypes["orders"];
-export type OrdersRecord = Orders & XataRecord;
+export type WebstoreOrders = InferredTypes["webstore-orders"];
+export type WebstoreOrdersRecord = WebstoreOrders & XataRecord;
+
+export type InventoryProducts = InferredTypes["inventory-products"];
+export type InventoryProductsRecord = InventoryProducts & XataRecord;
 
 export type DatabaseSchema = {
-  orders: OrdersRecord;
+  "webstore-orders": WebstoreOrdersRecord;
+  "inventory-products": InventoryProductsRecord;
 };
 
 const DatabaseClient = buildClient();

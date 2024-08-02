@@ -1,0 +1,13 @@
+{
+  "id": "mig_cqmb1vtl09mgl5u629qg",
+  "parentID": "mig_cqmb1sdl09mgl5u629pg",
+  "checksum": "1:6b80279aa48c0d563244b5606926045c2f06241663b89faf8d926a431968c715",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "webstore-orders",
+        "oldName": "orders"
+      }
+    }
+  ]
+}
