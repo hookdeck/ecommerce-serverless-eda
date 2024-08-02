@@ -1,0 +1,7 @@
+# Hookdeck Source URLs for publishing events
+HOOKDECK_ORDERS_URL=
+
+# [Xata] Configuration used by the CLI and the SDK
+# Make sure your framework/tooling loads this file on startup to have it available for the SDK
+XATA_BRANCH=
+XATA_API_KEY=
