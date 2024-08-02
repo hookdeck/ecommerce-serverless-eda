@@ -55,10 +55,10 @@ export default async function Home({ params }: { params: { sku: string } }) {
       await orderPost.json(),
     );
 
-    redirect(`/order/${orderRecord.id}`);
+    redirect(`/orders/${orderRecord.id}`);
   }
 
-  const product = (await getProducts({ sku: params.sku })) as Product;
+  const product = (await getProducts({ sku: params.sku }))[0] as Product;
   return (
     <>
       <ProductDetail product={product} showInventory={true} />

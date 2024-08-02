@@ -1,0 +1,18 @@
+{
+  "id": "mig_cqmb45ll09mgl5u62a1g",
+  "parentID": "mig_cqmb42dl09mgl5u62a0g",
+  "checksum": "1:06eb958cc4e84d78a093d5f4e1d38cfb4aba5e634d7497e91b4a9b11b5c39262",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "reserve_count",
+          "type": "int",
+          "notNull": true,
+          "defaultValue": "0"
+        },
+        "table": "inventory-products"
+      }
+    }
+  ]
+}

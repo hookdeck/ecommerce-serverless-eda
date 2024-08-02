@@ -1,0 +1,19 @@
+{
+  "id": "mig_cqmbcu0rbsptar3129jg",
+  "parentID": "mig_cqmbc78rbsptar3129i0",
+  "checksum": "1:87d9baa91c93cab32fcafb4a0b5fe6a745ec79d818ff9cdf635e4cf246e778d0",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "image_main",
+          "type": "file[]",
+          "file[]": {
+            "defaultPublicAccess": true
+          }
+        },
+        "table": "inventory-products"
+      }
+    }
+  ]
+}

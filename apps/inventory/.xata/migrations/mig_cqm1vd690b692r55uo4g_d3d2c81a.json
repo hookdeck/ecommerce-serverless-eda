@@ -1,0 +1,16 @@
+{
+  "id": "mig_cqm1vd690b692r55uo4g",
+  "parentID": "mig_cqm1v9e90b692r55uo3g",
+  "checksum": "1:d3d2c81a06183f51b118b6bfad526e03eef183d8e25ab8d729c973f3c89f9d7a",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "full_name",
+          "type": "string"
+        },
+        "table": "orders"
+      }
+    }
+  ]
+}

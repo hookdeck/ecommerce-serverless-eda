@@ -1,0 +1,16 @@
+{
+  "id": "mig_cqmb3oll09mgl5u629ug",
+  "parentID": "mig_cqmb3ktl09mgl5u629tg",
+  "checksum": "1:fe7ddec5afa141a224284dff0db2c760990a89188165e92b9e58e13d1338dd7c",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "price",
+          "type": "float"
+        },
+        "table": "inventory-products"
+      }
+    }
+  ]
+}

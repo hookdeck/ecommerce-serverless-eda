@@ -1,3 +1,10 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--gray-alpha-200);
+}
+
 .product * {
   margin-bottom: 10px;
 }
@@ -7,7 +14,7 @@
 }
 
 .product:not(:last-of-type) {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .primary {

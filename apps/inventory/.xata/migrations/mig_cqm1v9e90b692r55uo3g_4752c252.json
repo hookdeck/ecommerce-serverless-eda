@@ -1,0 +1,16 @@
+{
+  "id": "mig_cqm1v9e90b692r55uo3g",
+  "parentID": "mig_cqm1ut690b692r55uo2g",
+  "checksum": "1:4752c25214896a30046ad13b1eef502e618d380c97ac0adbe113318a8a341a37",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "sku",
+          "type": "string"
+        },
+        "table": "orders"
+      }
+    }
+  ]
+}

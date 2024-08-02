@@ -2,17 +2,7 @@ import styles from "./page.module.css";
 import { Product } from "@repo/types/products";
 import Link from "next/link";
 import ProductDetail from "./ui/product-detail";
-
-async function getProducts(): Promise<Product[]> {
-  const res = await fetch("http://localhost:3001/products");
-
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
+import { getProducts } from "./utils";
 
 export default async function Home() {
   const products = await getProducts();
@@ -27,7 +17,7 @@ export default async function Home() {
               <div className={styles.actions}>
                 <Link
                   className={styles.primary}
-                  href={`/product/${product.sku}`}
+                  href={`/products/${product.sku}`}
                 >
                   Learn more
                 </Link>

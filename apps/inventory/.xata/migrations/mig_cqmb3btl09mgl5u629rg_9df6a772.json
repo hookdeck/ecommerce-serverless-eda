@@ -1,0 +1,17 @@
+{
+  "id": "mig_cqmb3btl09mgl5u629rg",
+  "parentID": "mig_cqmb1vtl09mgl5u629qg",
+  "checksum": "1:9df6a7725ece831c408c3e192ef126e70eb4b0abafd8c4230e33f96fdb85ddff",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "sku",
+          "type": "string",
+          "unique": true
+        },
+        "table": "inventory-products"
+      }
+    }
+  ]
+}

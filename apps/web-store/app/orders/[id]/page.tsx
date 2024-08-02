@@ -16,7 +16,7 @@ export default async function Home({ params }: { params: { id: string } }) {
     notFound();
   }
 
-  const product = (await getProducts({ sku: order.sku! })) as Product;
+  const product = (await getProducts({ sku: order.sku! }))[0] as Product;
 
   return (
     <>

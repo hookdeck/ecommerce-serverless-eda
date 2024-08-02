@@ -1,0 +1,18 @@
+{
+  "id": "mig_cqmb42dl09mgl5u62a0g",
+  "parentID": "mig_cqmb3tll09mgl5u629vg",
+  "checksum": "1:a0e5f8b7dea0ba302f86cb8b6a7b5e5c5254d960c5629af40a37fa7526227d02",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "inventory_count",
+          "type": "int",
+          "notNull": true,
+          "defaultValue": "0"
+        },
+        "table": "inventory-products"
+      }
+    }
+  ]
+}

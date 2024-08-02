@@ -1,13 +1,18 @@
-import PRODUCTS from "../products.json";
+import { getXataClient } from "../../../xata";
 
 export async function GET(
   _request: Request,
   { params }: { params: { sku: string } },
 ) {
-  const product = PRODUCTS.find((product) => {
-    return product.sku === params.sku;
-  });
-  return Response.json(product);
+  const xata = getXataClient();
+  try {
+    const product = await xata.db["inventory-products"].getFirstOrThrow({
+      filter: { sku: params.sku },
+    });
+    return Response.json([product]);
+  } catch (e) {
+    Response.json({ sku: params.sku }, { status: 404 });
+  }
 }
 
 export async function PUT(

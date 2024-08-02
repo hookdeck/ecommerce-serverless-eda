@@ -1,0 +1,16 @@
+{
+  "id": "mig_cqmbc78rbsptar3129i0",
+  "parentID": "mig_cqmbc55l09mgl5u62a5g",
+  "checksum": "1:92189a7918282148e4d6925f7b534e776e2347bcb6c15d069ddaeb3bbeabb441",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "type",
+          "type": "string"
+        },
+        "table": "inventory-products"
+      }
+    }
+  ]
+}

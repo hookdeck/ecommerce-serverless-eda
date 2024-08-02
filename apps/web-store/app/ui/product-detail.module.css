@@ -1,3 +1,33 @@
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.details .textContainer {
+  max-width: 50%;
+}
+
+.details .imageContainer {
+  max-width: 50%;
+}
+
 .details * {
   margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .details {
+    flex-direction: column;
+  }
+
+  .details .textContainer {
+    max-width: 100%;
+  }
+
+  .details .imageContainer {
+    max-width: 100%;
+    align-self: center;
+  }
 }

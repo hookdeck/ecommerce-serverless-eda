@@ -1,5 +1,7 @@
-import PRODUCTS from "./products.json";
+import { getXataClient } from "../../xata";
 
 export async function GET() {
-  return Response.json(PRODUCTS);
+  const xata = getXataClient();
+  const products = await xata.db["inventory-products"].getAll();
+  return Response.json(products);
 }

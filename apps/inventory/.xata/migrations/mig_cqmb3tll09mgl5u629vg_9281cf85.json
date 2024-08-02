@@ -1,0 +1,16 @@
+{
+  "id": "mig_cqmb3tll09mgl5u629vg",
+  "parentID": "mig_cqmb3oll09mgl5u629ug",
+  "checksum": "1:9281cf858f93b357efed38f75636b1365bc95dc1789f877486e67ab548c34fa8",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "meta",
+          "type": "json"
+        },
+        "table": "inventory-products"
+      }
+    }
+  ]
+}
