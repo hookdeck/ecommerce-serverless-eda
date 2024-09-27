@@ -19,5 +19,9 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@hookdeck/pubsub": "^0.1.5-alpha",
+    "dotenv": "^16.4.5"
+  }
 }
